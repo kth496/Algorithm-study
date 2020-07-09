@@ -2,7 +2,6 @@
 using namespace std;
 
 int N, count_;
-bool already = false;
 
 bool isValid(vector<int>& queens, int k) {
     int i = 0;
@@ -26,10 +25,7 @@ void nqueen(vector<int> queens) {
         queens.push_back(i);
         if (isValid(queens, queens.size() - 1)) {
             if (queens.size() == N) {
-                if (!already) {
-                    printAns(queens);
-                    already = true;
-                }
+                // printAns(queens);
                 count_++;
                 return;
             }
@@ -47,5 +43,5 @@ int main() {
     cin >> N;
     vector<int> init(0);
     nqueen(init);
-    // cout << count_;
+    cout << count_;
 }
