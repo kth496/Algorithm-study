@@ -1,7 +1,17 @@
 {
   "tasks": [
     {
-      "label": "C++ build", // default g++ my setting
+      "label": "Python file executes",
+      "command": "python",
+      "args": ["${file}"],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "C++ build",
       "command": "g++",
       "args": ["-g", "${file}"]
     },
@@ -9,31 +19,8 @@
       "label": "cpp.exe build active file",
       "command": "g++",
       "args": ["-g", "${file}", "-o", "${fileBasenameNoExtension}"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
+      "problemMatcher": []
     }
-
-    // {
-    //   "label": "myLabel",
-    //   "type": "shell",
-    //   "command": "g++",
-    //   "args": ["-g", "main.cpp"],
-    //   "group": {
-    //     "kind": "build",
-    //     "isDefault": true
-    //   }
-    // },
-    // {
-    //   "type": "shell",
-    //   "label": "g++.exe build active file",
-    //   "command": "C:\\MinGW\\bin\\g++.exe",
-    //   "args": ["-g", "${file}", "-o", "${fileDirname}\\${fileBasenameNoExtension}.exe"],
-    //   "options": {
-    //     "cwd": "C:\\MinGW\\bin"
-    //   }
-    // }
   ],
   "version": "2.0.0"
 }
