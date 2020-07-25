@@ -22,7 +22,9 @@ long long solve() {
     return 2 * ret;
 }
 
-long long solve2() { long long Lyi; }
+long long solve2() { long long Lyi; 
+
+}
 
 int main(int argc, char** argv) {
     int T, test_case;
