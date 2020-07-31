@@ -19,3 +19,20 @@ def isPal(s, turn):
 for _ in range(T):
     d = input()
     print(isPal(d, False))
+
+''' 블루꺼 풀이
+#include<bits/stdc++.h>
+using namespace std;
+int T,len,ans1=0,ans2=0,cnt; string s;
+int main(){
+	ios_base::sync_with_stdio(0); cin.tie(0);
+	cin>>T;
+	while(T--){
+		cin>>s;
+		len=s.length(); ans1=ans2=0;
+		for(int i=0,j=len-1; i<=j; i++,j--) if(s[i]!=s[j]) ans1++,j++;
+		for(int i=0,j=len-1; i<=j; i++,j--) if(s[i]!=s[j]) ans2++,i--;
+		cout<<min(2,min(ans1,ans2))<<'\n';
+	}
+}
+'''
