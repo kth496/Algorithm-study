@@ -5,6 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "CodeLens (Launch) - solve_7576",
+      "request": "launch",
+      "mainClass": "solve_7576",
+      "projectName": "Algorithm-study_45477513"
+    },
+    {
       "name": "Python: Current File",
       "type": "python",
       "request": "launch",

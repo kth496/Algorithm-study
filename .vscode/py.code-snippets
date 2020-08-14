@@ -1,0 +1,8 @@
+{
+  "init": {
+    "scope": "python",
+    "prefix": "matinit",
+    "body": ["board = [[0 for _ in range(M)] for _ in range(N)]", "dr = [0, 0, 1, -1]", "dc = [1, -1, 0, 0]"],
+    "description": "Code for initialize N by M matrix"
+  }
+}

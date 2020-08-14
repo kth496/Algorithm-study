@@ -4,11 +4,7 @@
       "label": "Python file executes",
       "command": "python",
       "args": ["${file}"],
-      "group": "test",
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
-      }
+      "group": "test"
     },
     {
       "label": "C++ build",
@@ -18,7 +14,7 @@
     {
       "label": "cpp.exe build active file",
       "command": "g++",
-      "args": ["-g", "${file}", "-o", "${fileBasenameNoExtension}"],
+      "args": ["-g", "${file}", "-std=c++17", "-o", "${fileBasenameNoExtension}"],
       "problemMatcher": []
     }
   ],
