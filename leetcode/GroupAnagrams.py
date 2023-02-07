@@ -1,11 +1,11 @@
+from itertools import permutations
 from collections import defaultdict
-
 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        dic = defaultdict(list)
-        for word in strs:
-            key = ''.join(sorted(list(word)))
-            dic[key].append(word)
+        grouped_strs = defaultdict(list)
+        for element in strs:
+            key = ''.join(sorted(element))
+            grouped_strs[key].append(element)
+        return list(grouped_strs.values())
 
-        return list(dic.values())
